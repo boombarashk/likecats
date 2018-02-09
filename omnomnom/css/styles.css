@@ -1,0 +1,214 @@
+/* reset styles */
+html, body, div, span, label, p, h2{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	font-family: Helvetica, Arial, sans-serif;
+}
+body {
+	line-height: 1;
+}
+/* end of reset */
+html {background-color: #030303}
+html {
+	min-height: 100%;
+	/*
+	background-image: url('../img/bgshadow.png'),  url('../img/bgshadow-b.png'), url('../img/bg.gif');
+	background-position:  center 0, center bottom, top center;
+	background-repeat: repeat-x, repeat-x, repeat;
+	*/
+	background-image: url('../img/shadow.png'), url('../img/bg.gif');
+	background-position: center 0, center top;
+	background-repeat: repeat-x, repeat;
+	background-size: contain, auto;
+}
+@font-face {
+  font-family: 'Exo-Thin';
+  src:	url('../fonts/Exo2.0-Thin.otf') format('opentype'),
+		url('../fonts/Exo2.0-Thin.woff') format('woff'),
+		url('../fonts/Exo2.0-Thin.ttf') format('truetype')
+}
+body {	height: 100%; min-height:424px;}
+h1 {
+	color:#fff;
+	font-family: "Exo-Thin";
+	font-size:2.25em; /* 36px */
+	font-weight:normal;
+	text-align: center;
+	margin:0 auto;
+	padding-top:1.3em;
+	padding-bottom:0.9em;
+    line-height: .7em;
+}
+h2 {
+	font-size: 3em; /* 48px */ 
+	font-weight: bold;
+	margin:.3em 0 .2em;
+	line-height: .85em;
+	letter-spacing:-.5px;
+}
+a {
+	color:#1698d9;
+}
+a:hover {
+	color:#2ea8e6
+}
+.flex-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap:wrap
+}
+.flex-item {}
+.sticker {
+	height:480px;
+	width:320px;
+	box-sizing: border-box;
+	cursor: pointer;
+	background: #1698d9;
+	border-radius:14px;
+	clip-path: polygon(0 9%, 13% 0, 100% 0,   100% 100%, 0 100%)
+}
+.sticker .inner {
+	position:relative;
+	top:4px;
+	left:4px;
+	height:472px;
+	width:312px;
+	background:#fff url('../img/cat.png') -28px 205px no-repeat;
+	border-radius:10px;
+	clip-path: polygon(0 8.5%, 12.5% 0, 100% 0,   100% 100%, 0 100%)	
+}
+.label-head,
+.label-text,
+.inner label,
+.weight, .number{
+	font-family: "Trebuchet MS", "Exo-Thin";
+} 
+.label-head {
+	color:#000;
+	padding-left:42px;
+}
+.label-head span {
+	display:block;
+	font-size: .5em; /* 24px */
+	letter-spacing:0;
+	text-indent:.05em;
+}
+.label-text {
+	display:block;
+	color:#666;
+	font-size:1em;
+	padding-left:45px;
+	padding-right:20px;
+}
+small.label-text {
+	font-size:.875em; /* 14px */
+	line-height:1.2em;
+}
+.label-text:first-child {
+	padding-top:19px;
+}
+.label-item {
+	display:block;
+	width:320px;
+	padding:1.2em 0;
+	color:#fff;
+	font-size:.8125em; /* 13px */
+	text-align:center;
+	white-space: nowrap;
+}
+.label-item a {
+	position:relative;
+	text-decoration: none;
+	border-bottom:1px dashed #1698d9;
+	cursor:pointer;
+	z-index:1;
+}
+.number {
+	display:block;
+	font-size:2em; /* 42px */
+	padding:.5em 0 .15em;
+}
+.weight {
+	position: absolute;
+	right:11px;
+	bottom:11px;
+	height:80px;
+	width:80px;
+	border-radius: 40px;
+	background-color:#1698d9;
+	color:#fff;
+	font-size: 1.3125em; /* 21px */
+	text-align:center;
+	line-height:1.125em;
+}
+.sticker:hover,
+.sticker:hover .weight{
+	background-color:#2ea8e6
+}
+.sticker.selected,
+.sticker.selected .weight{
+	background-color:#d91667
+}
+.sticker.selected:hover,
+.sticker.selected:hover .weight{
+	background-color:#e62e7a
+}
+.sticker.disabled,
+.sticker.disabled:hover,
+.sticker.disabled .weight {
+	background-color: #b3b3b3;
+}
+.sticker.disabled .inner:after {
+	content:'';
+	position:absolute;
+	height:60%;
+	left:0;
+	right:0;
+	bottom:0;
+	background: #fff; 
+    border-radius: 10px;
+    opacity: .5;
+    z-index: -1;
+}
+.sticker.disabled{
+	cursor: default;
+}
+.sticker.disabled .label-head,
+.sticker.disabled .label-text{
+	color:#d4d4d4;
+}
+.label-item.disabled {
+	color:#ff6;
+}
+.js-hidden {
+	display:none;
+}
+#main {min-height:620px;}
+@media screen and (min-width: 1120px){
+	#main {
+	width:1120px;
+	margin:0 auto;
+	}
+}
+@media screen and (min-height: 630px){
+	html, body {  display:-webkit-grid; display: grid;}
+	#main {margin: auto;}
+	/*
+	#main {
+	position: absolute;
+	top:50%;
+	left:0;
+	right:0;
+	transform: translateY(-54%);
+	}*/
+}
+@media screen and (max-width: 1120px){
+	.flex-container {
+	justify-content: space-around;
+	}
+}
