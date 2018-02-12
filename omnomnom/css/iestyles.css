@@ -1,0 +1,42 @@
+/*----MS Edge Browser CSS Start----*/
+@supports (-ms-ime-align:auto)  {
+.sticker,
+.sticker:hover {
+	background: url('../img/catsprite.png') -960px -1px no-repeat transparent;
+}
+.sticker.disabled,
+.sticker.disabled:hover {
+	background: url('../img/catsprite.png') 0px -1px no-repeat transparent;
+}
+.sticker.selected:hover {
+	background: url('../img/catsprite.png') -320px -1px no-repeat transparent;
+}
+.sticker.selected
+{
+	background: url('../img/catsprite.png') -640px -1px no-repeat transparent;
+}
+.sticker .inner {
+	background:transparent;
+	}
+}
+/*----MS Edge Browser CSS End----*/
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+.sticker,
+.sticker:hover {
+	background: url('../img/catsprite.png') -960px -1px no-repeat transparent;
+}
+.sticker.disabled,
+.sticker.disabled:hover {
+	background: url('../img/catsprite.png') 0px -1px no-repeat transparent;
+}
+.sticker.selected:hover {
+	background: url('../img/catsprite.png') -320px -1px no-repeat transparent;
+}
+.sticker.selected
+{
+	background: url('../img/catsprite.png') -640px -1px no-repeat transparent;
+}
+.sticker .inner {
+	background:transparent;
+	}
+}
